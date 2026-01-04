@@ -20,14 +20,14 @@ public class Blackjack{
 		}
 		
 		//The FIRST 2 cards of player
-		System.out.println("◘◘◘◘◘YOUR 2 FIRST CARDS !!!◘◘◘◘◘\n");
+		System.out.println("^^^^^ YOUR 2 FIRST CARDS !!! ^^^^^\n");
 		printPlayer(myPlayer);
 		//1 card HIDDEN, 1 card SHOWN for the dealer
 		System.out.println("*********** Dealer Hand ***********");
 		System.out.println("The hand of the Dealer: "+myDealer.getCard(0)+" , HIDDEN CARD\n");
 		
 		//PLAYER TURN :  Asking the player, hit or hold and actions to sum 
-		System.out.println("◘◘◘◘◘PLAYER TURN TO HIT OR HOLD !!!◘◘◘◘◘\n");
+		System.out.println("^^^^^ PLAYER TURN TO HIT OR HOLD !!! ^^^^^\n");
 		int playerCardPosition = 1;    //Start at position 1 since player already has 2 cards
 		boolean playerHitCondition = true;   
 		
@@ -65,7 +65,7 @@ public class Blackjack{
 			
 		}
 		//PLAYER BET : Asking how much candies he wants to bet, validate the input and perform the actions to bet 
-		System.out.println("◘◘◘◘◘PLAYER BET !!!◘◘◘◘◘\n");
+		System.out.println("^^^^^ PLAYER BET !!! ^^^^^\n");
 		System.out.println("How many candies, would you like to bet ? Enter a number between 0 to 10");
 		int playerCandy = 0;
 		boolean validBet = false;
@@ -86,12 +86,12 @@ public class Blackjack{
 		}
 		
 		//DEALER BET : Automatic bet of 5 candies 
-		System.out.println("◘◘◘◘◘DEALER BET !!!◘◘◘◘◘\n");
+		System.out.println("^^^^^ DEALER BET !!! ^^^^^\n");
 		myDealer.removeCandy(DEALER_BET);
 		System.out.println("~~~Dealer automatically bet : "+DEALER_BET+" candies !~~~\n\n");
 		
 		//DEALER TURN :  Dealer automatic hitting until 17 or higher sum
-		System.out.println("◘◘◘◘◘DEALER TURN OF AUTOMATIC HIT !!!◘◘◘◘◘");
+		System.out.println("^^^^^ DEALER TURN OF AUTOMATIC HIT !!! ^^^^^");
 		
 		//Show the dealer card that was hidden at the start
 		System.out.println("\n~~~The hidden card of the dealer is: "+myDealer.getCard(1)+" ~~~\n\n");
@@ -162,13 +162,13 @@ public class Blackjack{
 	}
 	//HELPER METHOD printPlayerLoss : prints the message when player lost
 	public static void printPlayerLoss(Player p, int playerCandy){
-		System.out.println("\n(╥_╥) YOU LOST (╥_╥)\n(╥_╥) YOUR LOSS : "+playerCandy+" candies (╥_╥)");
+		System.out.println("\n:( YOU LOST :(\n:( YOUR LOSS : "+playerCandy+" candies :(");
 		System.out.println("YOU NOW HAVE : "+p.getCandy()+" candies\n\n");
 	}
 	//HELPER METHOD printDraw : prints the message when it is a DRAW
 	public static void printDraw(Player p, int playerCandy){
-		System.out.println("\n►►►►►►► DRAW ◄◄◄◄◄◄◄\n►►►►►►► YOU BOTH LOST YOUR CANDIES THAT YOU HAD BET ◄◄◄◄◄◄◄");
-		System.out.println("(╥_╥) YOUR LOSS : "+playerCandy+" candies (╥_╥)\nYOU NOW HAVE : "+p.getCandy()+" candies\n\n");
+		System.out.println("\n>>>>>>> DRAW <<<<<<<\n>>>>>>> YOU BOTH LOST YOUR CANDIES THAT YOU HAD BET <<<<<<<");
+		System.out.println(":( YOUR LOSS : "+playerCandy+" candies :(\nYOU NOW HAVE : "+p.getCandy()+" candies\n\n");
 	}
 	//HELPER METHOD printGameStart : prints the game start message and explanations for rules, bets and results 
 	public static void printGameStart(){

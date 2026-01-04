@@ -3,22 +3,22 @@ public enum Suit{
 	//toString method for each : returns the string that represents the suit
 	HEART{
 		public String toString(){
-			return "♥";//alt + 3
+			return "♥️";
 		}
 	},
 	SPADE{
 		public String toString(){
-			return "♠";//alt + 6
+			return "♠️";
 		}
 	},
 	CLUB{
 		public String toString(){
-			return "♣";//alt + 5
+			return "♣️";
 		}
 	},
 	DIAMOND{
 		public String toString(){
-			return "♦";//alt + 4
+			return "♦️";
 		}
 	}
 }
